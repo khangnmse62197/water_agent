@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="water-agent-rest" />
+        <module name="water-agent-data-rest" />
+        <module name="water-agent-application" />
+        <module name="water-agent-bootstrap" />
+        <module name="water-agent-data-jpa" />
+        <module name="water-agent-domain" />
+        <module name="water-agent-common-mapper" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="water-agent-application" options="-parameters" />
+      <module name="water-agent-bootstrap" options="-parameters" />
+      <module name="water-agent-common-mapper" options="-parameters" />
+      <module name="water-agent-data-jpa" options="-parameters" />
+      <module name="water-agent-data-rest" options="-parameters" />
+      <module name="water-agent-domain" options="-parameters" />
+      <module name="water-agent-rest" options="-parameters" />
+      <module name="water-agent-service" options="-parameters" />
+    </option>
+  </component>
+</project>
