@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    include: jwt, data, liquibase
+  servlet:
+    multipart:
+      max-file-size: 600MB
+      max-request-size: 600MB
+
+server:
+  port: 9000
