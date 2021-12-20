@@ -8,5 +8,4 @@ public class WaterAgentBootStrap {
     public static void main(String[] args) {
         SpringApplication.run(WaterAgentBootStrap.class, args);
     }
-
 }
