@@ -32,3 +32,8 @@ In there:
 
 || Infrastructure || -> || Domain ||
 
+# Start Guideline Window
+1. Run run_docker-compose-db.bat to start MySQL Image (Need install Docker Desktop first).
+2. Create 1 DB name: water_agent
+3. mvn clean compile and start app via IDE(IntelliJ)
+TODO: Build project to executable file.
