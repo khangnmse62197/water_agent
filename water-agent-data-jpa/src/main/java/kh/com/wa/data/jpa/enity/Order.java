@@ -27,4 +27,7 @@ public class Order {
 
     @Column
     Integer discount;
+
+    @OneToOne(mappedBy = "order")
+    Audit audit;
 }

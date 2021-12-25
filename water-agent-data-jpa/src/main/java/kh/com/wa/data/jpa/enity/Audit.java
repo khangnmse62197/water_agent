@@ -21,13 +21,16 @@ public class Audit {
     @Column
     String description;
 
-    @Column(name = "user_id")
-    Integer userId; //TODO add relation
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    User user;
 
     @Column
     AuditTypeEnum type;
 
-    @Column(name = "order_id")
-    Integer orderId; //TODO add relation
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "order_id", referencedColumnName = "id")
+    Order order;
 
 }

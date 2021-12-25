@@ -19,4 +19,10 @@
             ALTER TABLE supplier_category DROP COLUMN id;
         </sql>
     </changeSet>
+    <changeSet author="khang" id="add_fk_audit">
+        <sql>
+            ALTER TABLE audit ADD CONSTRAINT audit_FK FOREIGN KEY (id) REFERENCES water_agent.`user`(id);
+            ALTER TABLE audit ADD CONSTRAINT audit_FK_1 FOREIGN KEY (id) REFERENCES water_agent.`order`(id);
+        </sql>
+    </changeSet>
 </databaseChangeLog>

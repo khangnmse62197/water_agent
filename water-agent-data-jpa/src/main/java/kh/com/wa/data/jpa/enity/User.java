@@ -36,4 +36,6 @@ public class User {
     @Column(name = "employee_id")
     Integer employeeId; // TODO add relation
 
+    @OneToOne(mappedBy = "user")
+    Audit audit;
 }
