@@ -16,8 +16,9 @@ public class OrderDetail {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
-    @Column(name = "order_id")
-    Integer orderId;
+    @ManyToOne
+    @JoinColumn(name = "order_id", nullable = false)
+    Order order;
 
     @Column(name = "product_warehouse_id")
     Integer productWarehouseId; //TODO add relation
