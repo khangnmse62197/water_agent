@@ -28,7 +28,6 @@ public class Audit {
     @Column
     AuditTypeEnum type;
 
-
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "order_id", referencedColumnName = "id")
     Order order;

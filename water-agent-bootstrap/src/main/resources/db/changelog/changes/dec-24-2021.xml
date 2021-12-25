@@ -25,4 +25,10 @@
             ALTER TABLE audit ADD CONSTRAINT audit_FK_1 FOREIGN KEY (id) REFERENCES water_agent.`order`(id);
         </sql>
     </changeSet>
+    <changeSet author="khang" id="add_fk_user_employee">
+        <sql>
+            ALTER TABLE `user` ADD CONSTRAINT user_FK FOREIGN KEY (id) REFERENCES employee(id);
+        </sql>
+    </changeSet>
+
 </databaseChangeLog>
