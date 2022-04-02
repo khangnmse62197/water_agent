@@ -1,22 +1,12 @@
 version: 2.1
-
-jobs:
-  build:
-    machine:
-      image: ubuntu-1604:202007-01
-    steps:
-      - run:
-          name: Install OpenJDK 11
-          command: |
-            sudo apt-get update && sudo apt-get install openjdk-11-jdk
-            sudo update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
-            sudo update-alternatives --set javac /usr/lib/jvm/java-11-openjdk-amd64/bin/javac
-            java -version
-
+executors:
+  j11:
+    docker:
+      - image: 'cimg/openjdk:11.0'
 orbs:
-  maven: circleci/maven@0.0.12
-
+  maven: circleci/maven@1.1
 workflows:
   maven_test:
     jobs:
-      - maven/test # checkout, build, test, and upload test results
+      - maven/test:
+          executor: j11
