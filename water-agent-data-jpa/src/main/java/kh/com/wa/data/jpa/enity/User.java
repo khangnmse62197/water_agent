@@ -33,7 +33,10 @@ public class User {
     @Column(name = "role")
     UserPermissionEnum permission;
 
-    @Column(name = "employee_id")
-    Integer employeeId; // TODO add relation
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "employee_id", referencedColumnName = "id")
+    Employee employee;
 
+    @OneToOne(mappedBy = "employee")
+    Audit audit;
 }

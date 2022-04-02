@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity(name = "order")
 @Getter
@@ -27,4 +28,10 @@ public class Order {
 
     @Column
     Integer discount;
+
+    @OneToOne(mappedBy = "order")
+    Audit audit;
+
+    @OneToMany(mappedBy = "order")
+    List<OrderDetail> orderDetails;
 }

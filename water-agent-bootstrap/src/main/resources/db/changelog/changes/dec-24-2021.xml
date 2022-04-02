@@ -19,4 +19,22 @@
             ALTER TABLE supplier_category DROP COLUMN id;
         </sql>
     </changeSet>
+    <changeSet author="khang" id="add_fk_audit">
+        <sql>
+            ALTER TABLE audit ADD CONSTRAINT audit_FK FOREIGN KEY (user_id) REFERENCES `user`(id);
+            ALTER TABLE audit ADD CONSTRAINT audit_FK_1 FOREIGN KEY (order_id) REFERENCES `order`(id);
+        </sql>
+    </changeSet>
+    <changeSet author="khang" id="add_fk_user_employee">
+        <sql>
+            ALTER TABLE `user` ADD CONSTRAINT user_FK FOREIGN KEY (employee_id) REFERENCES employee(id);
+        </sql>
+    </changeSet>
+
+    <changeSet author="khang" id="add_fk_order_detail__order">
+        <sql>
+            ALTER TABLE order_detail ADD CONSTRAINT order_detail_FK FOREIGN KEY (order_id) REFERENCES `order`(id);
+        </sql>
+    </changeSet>
+
 </databaseChangeLog>
