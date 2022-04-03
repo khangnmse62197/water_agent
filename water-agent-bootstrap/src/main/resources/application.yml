@@ -8,3 +8,8 @@ spring:
 
 server:
   port: 9000
+
+jwt:
+  app:
+    jwtSecret: WA_JWT_APP_SECRET
+    jwtExpirationMs: 14_400_000 # 900_000s = 15 minutes
