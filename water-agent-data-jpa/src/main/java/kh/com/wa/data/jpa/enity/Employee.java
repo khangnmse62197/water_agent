@@ -29,6 +29,6 @@ public class Employee {
     @Column
     String position;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "employee")
     User user;
 }

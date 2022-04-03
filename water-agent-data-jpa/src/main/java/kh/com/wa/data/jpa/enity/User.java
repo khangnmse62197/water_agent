@@ -28,15 +28,17 @@ public class User {
     String password;
 
     @Column(name = "role")
+    @Enumerated
     UserRoleEnum role;
 
-    @Column(name = "role")
+    @Column(name = "permission")
+    @Enumerated
     UserPermissionEnum permission;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "employee_id", referencedColumnName = "id")
     Employee employee;
 
-    @OneToOne(mappedBy = "employee")
+    @OneToOne(mappedBy = "user")
     Audit audit;
 }

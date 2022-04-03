@@ -26,6 +26,7 @@ public class Audit {
     User user;
 
     @Column
+    @Enumerated
     AuditTypeEnum type;
 
     @OneToOne(cascade = CascadeType.ALL)
