@@ -22,6 +22,12 @@
             <artifactId>water-agent-rest</artifactId>
             <version>${project.version}</version>
         </dependency>
+
+        <!-- FLYWAY -->
+        <dependency>
+            <artifactId>flyway-core</artifactId>
+            <groupId>org.flywaydb</groupId>
+        </dependency>
     </dependencies>
 
 </project>
