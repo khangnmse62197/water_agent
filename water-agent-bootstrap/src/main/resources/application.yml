@@ -1,6 +1,6 @@
 spring:
   profiles:
-    include: jwt, data, liquibase
+    include: jwt, data
   servlet:
     multipart:
       max-file-size: 600MB
