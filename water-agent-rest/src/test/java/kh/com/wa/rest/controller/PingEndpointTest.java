@@ -1,5 +1,6 @@
 package kh.com.wa.rest.controller;
 
+import kh.com.wa.rest.dto.TestDTO;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -18,11 +19,11 @@ class PingEndpointTest {
     @Test
     void test_ping_end_point() {
         // When
-        ResponseEntity<String> pong = pingEndpoint.ping();
+        ResponseEntity<TestDTO> pong = pingEndpoint.ping();
 
         // Then
         assertThat(pong).isNotNull();
         assertThat(pong.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(pong.getBody()).isEqualTo("pong");
+        assertThat(pong.getBody().getHello()).isEqualTo("pong");
     }
 }
