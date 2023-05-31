@@ -22,7 +22,11 @@
             <artifactId>water-agent-rest</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>kh.com.wa</groupId>
+            <artifactId>water-agent-data-jpa</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <!-- FLYWAY -->
         <dependency>
             <artifactId>flyway-core</artifactId>

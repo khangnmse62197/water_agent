@@ -1,34 +1,31 @@
-package kh.com.wa.data.jpa.enity;
+package kh.com.wa.data.jpa.entity;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 
-@Entity(name = "employee")
+@Entity(name = "product")
 @Getter
 @Setter
 @AllArgsConstructor(staticName = "of")
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Employee {
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
 
+    @Column(name = "supplier_category_id")
+    Integer supplierCategoryId;
+
     @Column
     String name;
 
     @Column
-    String address;
+    Integer price;
 
     @Column
-    String phone;
-
-    @Column
-    String position;
-
-    @OneToOne(mappedBy = "user")
-    User user;
+    Integer promotion;
 }

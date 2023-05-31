@@ -6,12 +6,12 @@
     <packaging>pom</packaging>
     <modules>
         <module>water-agent-application</module>
-        <module>water-agent-domain</module>
+<!--        <module>water-agent-domain</module>-->
         <module>water-agent-bootstrap</module>
         <module>water-agent-rest</module>
-        <module>water-agent-common-mapper</module>
+<!--        <module>water-agent-common-mapper</module>-->
         <module>water-agent-data-jpa</module>
-        <module>water-agent-data-rest</module>
+<!--        <module>water-agent-data-rest</module>-->
     </modules>
     <parent>
         <artifactId>spring-boot-starter-parent</artifactId>

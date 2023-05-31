@@ -1,7 +1,7 @@
-package kh.com.wa.data.jpa.enity;
+package kh.com.wa.data.jpa.entity;
 
-import kh.com.wa.domain.vo.UserPermissionEnum;
-import kh.com.wa.domain.vo.UserRoleEnum;
+import kh.com.wa.data.jpa.entity.vo.UserPermissionEnum;
+import kh.com.wa.data.jpa.entity.vo.UserRoleEnum;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -30,13 +30,13 @@ public class User {
     @Column(name = "role")
     UserRoleEnum role;
 
-    @Column(name = "role")
+    @Column(name = "permission")
     UserPermissionEnum permission;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "employee_id", referencedColumnName = "id")
     Employee employee;
 
-    @OneToOne(mappedBy = "employee")
+    @OneToOne(mappedBy = "user")
     Audit audit;
 }

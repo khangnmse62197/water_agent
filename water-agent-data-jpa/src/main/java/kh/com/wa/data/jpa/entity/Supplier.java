@@ -1,4 +1,4 @@
-package kh.com.wa.data.jpa.enity;
+package kh.com.wa.data.jpa.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,17 +1,18 @@
-package kh.com.wa.data.jpa.enity;
+package kh.com.wa.data.jpa.entity;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 
-@Entity(name = "warehouse")
+@Entity(name = "employee")
 @Getter
 @Setter
 @AllArgsConstructor(staticName = "of")
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Warehouse {
+public class Employee {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
@@ -22,10 +23,12 @@ public class Warehouse {
     @Column
     String address;
 
-    @Column(name = "phone_number")
+    @Column
     String phone;
 
-    @Column(name = "employee_id")
-    Integer employeeId;
+    @Column
+    String position;
 
+    @OneToOne(mappedBy = "employee")
+    User user;
 }

@@ -1,6 +1,6 @@
-package kh.com.wa.data.jpa.enity;
+package kh.com.wa.data.jpa.entity;
 
-import kh.com.wa.domain.vo.AuditTypeEnum;
+import kh.com.wa.data.jpa.entity.vo.AuditTypeEnum;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -21,14 +21,14 @@ public class Audit {
     @Column
     String description;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     User user;
 
     @Column
     AuditTypeEnum type;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id", referencedColumnName = "id")
     Order order;
 
