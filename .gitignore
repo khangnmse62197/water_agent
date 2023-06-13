@@ -1,7 +1,0 @@
-target
-.idea
-*.iml
-*.log
-/water-agent-data-rest/
-/water-agent-domain/
-/water-agent-common-mapper/
