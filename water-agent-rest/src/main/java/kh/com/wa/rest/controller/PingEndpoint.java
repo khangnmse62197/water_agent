@@ -15,7 +15,7 @@ public class PingEndpoint {
     @GetMapping("/ping")
     @CrossOrigin
     public ResponseEntity<TestDTO> ping() {
-        LOG.info("Ping endpoint reached");
+        LOG.info("Ping endpoint reached change some thing");
         return ResponseEntity.ok(new TestDTO("pong"));
     }
 }
